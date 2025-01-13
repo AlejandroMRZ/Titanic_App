@@ -1,33 +1,29 @@
-/* 🌊 Estilo general del cuerpo */
+/* 🌊 Body Background with Titanic Image */
 body, html {
     height: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #ffffff;
-}
-
-/* 🌅 Fondo temático del Titanic */
-.background {
     background-image: url('{{ url_for("static", filename="images/titanic_background.jpg") }}');
     background-size: cover;
     background-position: center;
-    height: 100vh;
-    position: relative;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
-/* 🎨 Superposición oscura para mejorar el contraste */
+/* 🌑 Dark Overlay for Contrast */
 .overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    height: 100%;
     width: 100%;
+    height: 100%;
     background: rgba(0, 0, 50, 0.6);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(2px);
 }
 
-/* 📄 Contenedor principal */
+/* 📄 Form Container */
 .container {
     position: relative;
     z-index: 2;
@@ -41,14 +37,14 @@ body, html {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-/* 📝 Título principal */
+/* 📝 Title Styling */
 h1 {
     font-size: 28px;
     margin-bottom: 10px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* ✍️ Etiquetas */
+/* ✍️ Labels */
 label {
     display: block;
     text-align: left;
@@ -56,7 +52,7 @@ label {
     font-weight: bold;
 }
 
-/* 🖊️ Campos de entrada */
+/* 🖊️ Input Fields */
 input, select {
     width: 100%;
     padding: 10px;
@@ -66,72 +62,7 @@ input, select {
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
-/* ⚓ Botón de predicción */
-button {
-    background-color: #1E90FF;
-    color: #ffffff;
-    padding: 10px;
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #4169E1;
-}
-
-/* 📝 Resultado de la predicción */
-.result {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-left: 5px solid #FFD700;
-    border-radius: 5px;
-    font-weight: bold;
-}
-/* 🌊 Set Titanic background image */
-body {
-    background-image: url('{{ url_for("static", filename="images/titanic_background.jpg") }}');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #ffffff;
-}
-
-/* 🔵 Add a dark overlay for contrast */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 50, 0.5); /* Semi-transparent navy overlay */
-    backdrop-filter: blur(2px);
-}
-
-/* 📄 Form Container */
-.container {
-    position: relative;
-    z-index: 2;
-    background-color: rgba(0, 0, 50, 0.8);
-    padding: 40px;
-    border-radius: 10px;
-    width: 400px;
-    margin: auto;
-    margin-top: 10%;
-    text-align: center;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
-
-/* Button Styling */
+/* ⚓ Predict Button */
 button {
     background-color: #1E90FF;
     color: white;
@@ -147,4 +78,14 @@ button {
 
 button:hover {
     background-color: #4169E1;
+}
+
+/* 📝 Result Display */
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-left: 5px solid #FFD700;
+    border-radius: 5px;
+    font-weight: bold;
 }
