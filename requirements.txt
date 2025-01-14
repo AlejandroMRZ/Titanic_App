@@ -3,4 +3,3 @@ gunicorn
 scikit-learn
 requests
 python-dotenv
-pickle-mixin

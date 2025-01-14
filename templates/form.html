@@ -7,17 +7,14 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <!-- 🌊 Background Overlay -->
     <div class="overlay"></div>
 
-    <!-- 🚢 Prediction Form Container -->
     <div class="container">
         <h1>🚢 Predicción de Supervivencia en el Titanic 🌊</h1>
         <p>¿Habrías sobrevivido al hundimiento del Titanic?</p>
 
-        <!-- 📄 Prediction Form -->
         <form action="/predict_form" method="POST">
-            <label for="Pclass">🔢 Clase del pasajero (1 = Primera, 2 = Segunda, 3 = Tercera):</label>
+            <label for="Pclass">🔢 Clase del pasajero:</label>
             <select id="Pclass" name="Pclass" required>
                 <option value="1">Primera Clase</option>
                 <option value="2">Segunda Clase</option>
@@ -38,7 +35,7 @@
 
         {% if prediction %}
             <div class="result">
-                <h2>🔮 Resultado de la Predicción:</h2>
+                <h2>🔮 Resultado:</h2>
                 <p>{{ prediction }}</p>
             </div>
 
