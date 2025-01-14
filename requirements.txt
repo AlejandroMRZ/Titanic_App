@@ -1,4 +1,6 @@
 Flask
 gunicorn
-pickle-mixin
 scikit-learn
+requests
+python-dotenv
+pickle-mixin
