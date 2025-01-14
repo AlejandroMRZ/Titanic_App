@@ -46,7 +46,7 @@ def get_gemini_explanation(pclass, sex, age, prediction):
         "📖 **Instrucciones:**\n"
         "- Proporciona un análisis histórico y lógico basado en estos datos.\n"
         "- Relaciona la clase social y el acceso a los botes salvavidas.\n"
-        "- Sé claro, conciso y profesional.\n\n"
+        "- Sé claro, conciso y profesional. No quiero ningun tipo de saludo en la explicacion. Dame unicamente la explicacion straigth away, sin introduccione\n\n"
         "📢 **Explicación:**"
     )
 
