@@ -1,4 +1,4 @@
-/* 🌊 Body Background with Titanic Image */
+/* 🌊 Body Background */
 body, html {
     height: 100%;
     margin: 0;
@@ -9,10 +9,9 @@ body, html {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    overflow: hidden;
 }
 
-/* 🌑 Dark Overlay for Contrast */
+/* 🌑 Dark Overlay */
 .overlay {
     position: fixed;
     top: 0;
@@ -20,13 +19,10 @@ body, html {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 50, 0.6);
-    backdrop-filter: blur(2px);
 }
 
 /* 📄 Form Container */
 .container {
-    position: relative;
-    z-index: 2;
     background-color: rgba(0, 0, 50, 0.85);
     padding: 40px;
     border-radius: 10px;
@@ -34,58 +30,19 @@ body, html {
     margin: auto;
     margin-top: 10%;
     text-align: center;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-/* 📝 Title Styling */
-h1 {
-    font-size: 28px;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-/* ✍️ Labels */
-label {
-    display: block;
-    text-align: left;
-    margin-top: 15px;
-    font-weight: bold;
-}
-
-/* 🖊️ Input Fields */
-input, select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: none;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
-}
-
-/* ⚓ Predict Button */
-button {
-    background-color: #1E90FF;
-    color: white;
-    padding: 10px;
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #4169E1;
-}
-
-/* 📝 Result Display */
-.result {
+/* 📝 Result Box */
+.result, .ai-explanation {
     margin-top: 20px;
     padding: 15px;
     background-color: rgba(255, 255, 255, 0.2);
     border-left: 5px solid #FFD700;
     border-radius: 5px;
-    font-weight: bold;
+}
+
+/* ⚓ Button */
+button {
+    background-color: #1E90FF;
+    color: white;
 }

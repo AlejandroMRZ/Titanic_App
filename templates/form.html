@@ -10,7 +10,7 @@
     <!-- 🌊 Background Overlay -->
     <div class="overlay"></div>
 
-    <!-- 🚢 Container for the Form -->
+    <!-- 🚢 Prediction Form Container -->
     <div class="container">
         <h1>🚢 Predicción de Supervivencia en el Titanic 🌊</h1>
         <p>¿Habrías sobrevivido al hundimiento del Titanic?</p>
@@ -36,11 +36,15 @@
             <button type="submit">⚓ Predecir</button>
         </form>
 
-        <!-- 🔮 Prediction Result -->
         {% if prediction %}
             <div class="result">
                 <h2>🔮 Resultado de la Predicción:</h2>
                 <p>{{ prediction }}</p>
+            </div>
+
+            <div class="ai-explanation">
+                <h3>🤖 Explicación de la IA:</h3>
+                <p>{{ explanation }}</p>
             </div>
         {% endif %}
     </div>
