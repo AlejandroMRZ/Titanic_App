@@ -1,48 +1,58 @@
-/* 🌊 Body Background */
+/* 🌊 Background */
 body, html {
     height: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #ffffff;
     background-image: url('{{ url_for("static", filename="images/titanic_background.jpg") }}');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-/* 🌑 Dark Overlay */
+/* 🔧 Fix the Overlay */
 .overlay {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 50, 0.6);
+    z-index: 0;  /* Ensure it's behind the form */
 }
 
-/* 📄 Form Container */
+/* 📝 Form Container */
 .container {
+    position: relative;
+    z-index: 2;  /* Ensure the form is on top */
     background-color: rgba(0, 0, 50, 0.85);
     padding: 40px;
     border-radius: 10px;
     width: 400px;
-    margin: auto;
-    margin-top: 10%;
+    margin: 10% auto;
     text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-/* 📝 Result Box */
-.result, .ai-explanation {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-left: 5px solid #FFD700;
+/* 🔘 Inputs */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
     border-radius: 5px;
+    border: none;
 }
 
-/* ⚓ Button */
+/* 🟦 Button */
 button {
     background-color: #1E90FF;
     color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4169E1;
 }
