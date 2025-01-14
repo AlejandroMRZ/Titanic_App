@@ -1,28 +1,29 @@
-/* 🌊 Background */
+/* 🌊 Fondo del cuerpo */
 body, html {
     height: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff; /* 🔥 Texto blanco en toda la app */
     background-image: url('{{ url_for("static", filename="images/titanic_background.jpg") }}');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-/* 🔧 Fix the Overlay */
+/* 🌑 Superposición oscura para contraste */
 .overlay {
     position: fixed;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 50, 0.6);
-    z-index: 0;  /* Ensure it's behind the form */
+    z-index: 0; /* Detrás del contenido */
 }
 
-/* 📝 Form Container */
+/* 📄 Contenedor del formulario */
 .container {
     position: relative;
-    z-index: 2;  /* Ensure the form is on top */
+    z-index: 2; /* Encima de la superposición */
     background-color: rgba(0, 0, 50, 0.85);
     padding: 40px;
     border-radius: 10px;
@@ -32,16 +33,25 @@ body, html {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-/* 🔘 Inputs */
+/* 📝 Títulos */
+h1, h2, h3, p, label {
+    color: #ffffff; /* 🔥 Texto blanco */
+    margin-bottom: 15px;
+}
+
+/* 🖊️ Inputs y selects */
 input, select {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
     border-radius: 5px;
     border: none;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000000; /* Texto negro para contraste en los inputs */
 }
 
-/* 🟦 Button */
+/* ⚓ Botón de predicción */
 button {
     background-color: #1E90FF;
     color: white;
@@ -50,9 +60,22 @@ button {
     border: none;
     border-radius: 5px;
     margin-top: 20px;
+    font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
     background-color: #4169E1;
+}
+
+/* 🔮 Resultado de la predicción */
+.result, .ai-explanation {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-left: 5px solid #FFD700;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #ffffff; /* 🔥 Texto blanco */
 }
